@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="vedio.css">
+<style>
+    
+</style>
+<body>
+
+    <div id="header">
+        <div>
+            <img id="logo" src="https://play-lh.googleusercontent.com/vA4tG0v4aasE7oIvRIvTkOYTwom07DfqHdUPr6k7jmrDwy_qA_SonqZkw6KX0OXKAdk" >
+        </div>
+        
+        <div>
+            <input type="text" id="query">
+            <button id="btn" onclick="searchVedios()" ><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        
+    </div>
+
+    <div id="ad"></div>
+
+</body>
+</html>
+<script>
+    console.log("obcoi")
+    let div = document.createElement("div")
+   let x=  JSON.parse(localStorage.getItem("vedio"))
+   console.log(x)
+  
+        let iframe = document.createElement("iframe")
+
+        iframe.src = `https://www.youtube.com/embed/${x.videoId}`
+        iframe.width = "100%";
+        iframe.height = "100%";
+        iframe.allow = "fullscreen";
+
+        div.append(iframe)
+    document.getElementById("ad").append(div)
+
+   
+//    append(x)
+</script>
+<script
+src="https://kit.fontawesome.com/24c494a6b6.js"
+crossorigin="anonymous"
+></script>
